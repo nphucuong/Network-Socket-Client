@@ -1,0 +1,25 @@
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Sign In </h2>
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+      </div>
+
+      <!-- Login Form -->
+      <form>
+        <input type="text" [(ngModel)]="username" id="username" class="fadeIn second" name="username" placeholder="Tên" pattern="[A-Za-z0-9]{3}" required>
+        <input type="button" (click)="checkName()" class="fadeIn fourth" value="Log In">
+      </form>
+
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover">Đề 2: Trò chơi trắc nghiệm vui</a>
+      </div>
+
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>

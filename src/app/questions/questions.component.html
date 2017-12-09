@@ -1,0 +1,56 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+
+    <div class="fadeIn first" *ngIf="noPlayers < noPlayersRequired">
+      <!-- Tabs Titles -->
+      <div>
+        <h2 class="active"> Waiting </h2>
+      </div>
+
+      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="iconWating" alt="User Icon"/>
+      <h2 class="fadeIn second">Vui lòng đợi đủ người chơi</h2>
+    </div>
+
+    <!-- Login Form -->
+    <div *ngIf="noPlayers >= noPlayersRequired">
+      <!-- Tabs Titles -->
+      <div>
+        <h2 class="active"> Playing </h2>
+      </div>
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="../../assets/book-open-flat.png" id="iconPlaying" width="180" height="180" alt="User Icon"/>
+      </div>
+
+      <form>
+        <h4>{{question.question_content}}</h4>
+        <label class="container">{{question.option1}}
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">{{question.option2}}
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">{{question.option3}}
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">{{question.option4}}
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </form>
+      <button type="button" style="margin-bottom: 10px" class="btn btn-primary">Next</button>
+    </div>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Đề 2: Trò chơi trắc nghiệm vui</a>
+    </div>
+
+  </div>
+</div>
+
+<router-outlet></router-outlet>
