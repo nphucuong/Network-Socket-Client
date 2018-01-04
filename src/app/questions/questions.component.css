@@ -28,6 +28,21 @@
       color: #cccccc;
     }
 
+    .resultItem {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 10px 0px 10px 0px;
+      color: #295a91;
+    }
+
+    .winnerItem {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 10px 0px 10px 0px;
+      color: #295a91;
+    }
     /* STRUCTURE */
 
     .wrapper {

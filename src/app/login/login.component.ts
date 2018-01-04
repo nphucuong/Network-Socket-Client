@@ -14,13 +14,17 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router) {
 
   }
-
+  receiveUserConnected(){
+    this.socket.on('userConnect',(result)=> {
+      console.log ('User connected loginComponent: ',result);
+    });
+  }
   ngOnInit() {
   }
 
   checkName() {
     this.socket.emit('checkName', this.username);
-
+    this.receiveUserConnected();
     this.socket.on('canLogin', (result) => {
       if (result == 1) {
         this.router.navigateByUrl('/questions');
